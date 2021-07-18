@@ -48,8 +48,6 @@ export class App extends Component {
   getVisibleContacts = () => {
      
     const { filter, contacts } = this.state;
-    console.log(contacts);
-
     const normalizedFilter = filter.toLowerCase();
 
     return contacts.filter(contact =>
@@ -66,7 +64,6 @@ export class App extends Component {
         <Section title='Phonebook'>
           <Form onSubmit={this.addContact} />
         </Section>        
-        {/* <Contacts contacts={contacts}></Contacts> */}
         <Section title='Contacts'>
           <Filter value={filter} onChange={this.changeFilter}></Filter>
         <Contacts contacts={visibleContacts} onDeleteContact={this.deleteContact}></Contacts>

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types'
+
 
 import{Container,TextP} from './Filter.style'
 
@@ -12,3 +14,8 @@ function Filter({ value, onChange }) {
 }
 
 export default Filter
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
